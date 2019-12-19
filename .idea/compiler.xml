@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ConsumerFeign" />
+        <module name="ConsumerRibbon" />
+        <module name="Entity" />
+        <module name="EurekaServer" />
+        <module name="GatewayZuul" />
+        <module name="HystrixDashboard" />
+        <module name="NativeConfigClient" />
+        <module name="NativeConfigServer" />
+        <module name="ServiceProviderA" />
+        <module name="ServiceProviderB" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ConsumerA" options="-parameters" />
+      <module name="ConsumerFeign" options="-parameters" />
+      <module name="ConsumerRibbon" options="-parameters" />
+      <module name="Entity" options="-parameters" />
+      <module name="EurekaServer" options="-parameters" />
+      <module name="GatewayZuul" options="-parameters" />
+      <module name="HystrixDashboard" options="-parameters" />
+      <module name="NativeConfigClient" options="-parameters" />
+      <module name="NativeConfigServer" options="-parameters" />
+      <module name="ServiceProviderA" options="-parameters" />
+      <module name="ServiceProviderB" options="-parameters" />
+    </option>
+  </component>
+</project>

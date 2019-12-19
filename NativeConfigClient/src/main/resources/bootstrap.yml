@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8762
+      fail-fast: true
+
+#通过 spring.application.name 结合 spring.profiles.active 拼接⽬目标配置⽂文件名，
+#configclient-dev.yml，去 Config Server 中查找该⽂文件。
+
+#cloud.config.uri ：本地 Config Server 的访问路路径
+#cloud.config.fail-fase ：设置客户端优先判断 Config Server 获取是否正常。
+
+#有时候启动客户端会出现失败的问题，发现是由于网络原因，config响应无效时导致的，在bootstrap.yml（application.yml也可以）中设置即可。
+#有时客户端需要在 config server 无响应时进行重试，以给 config server 时间进行恢复。利用 spring 提供的重试组件，我们可以方便的配置重试机制，包括重试间隔，重试次数等。
+#https://blog.csdn.net/weixin_33735077/article/details/88121720
+#cloud:
+#  config:
+#    fail-fast: true #是否启动 快速失败功能，功能开启则优先判断config server是否正常
+#    retry:
+#      initial-interval: 1000 #最初重试间隔为 1000 毫秒
+#      max-attempts: 6 #最多重试 6 次
+#      max-interval: 2000 #最长重试间隔为 2000 毫秒
+#      multiplier: 1.1 #每次重试失败后，重试间隔所增加的倍数
+
+#  pom.xml中添加如下依赖
+#  <dependency>
+#  <groupId>org.springframework.retry</groupId>
+#  <artifactId>spring-retry</artifactId>
+#  <version>1.2.2.RELEASE</version>
+#  </dependency>
+#  <dependency>
+#  <groupId>org.springframework.boot</groupId>
+#  <artifactId>spring-boot-starter-aop</artifactId>
+#  </dependency>
