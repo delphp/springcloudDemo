@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/delphp/springcloudDemo.git
+          searchPaths: config
+          username: jack_tw@163.com
+          password: 136484762fdkj
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

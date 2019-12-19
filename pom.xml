@@ -20,6 +20,7 @@
         <module>HystrixDashboard</module>
         <module>NativeConfigServer</module>
         <module>NativeConfigClient</module>
+        <module>ConfigServer</module>
     </modules>
 
     <parent>
