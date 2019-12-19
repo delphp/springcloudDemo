@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/delphp/springcloudDemo.git
           searchPaths: config
           username: jack_tw@163.com
-          password: 136484762fdkj
+          password: root
       label: master
 eureka:
   client:
